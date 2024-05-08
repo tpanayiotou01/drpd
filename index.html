@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| DRPD |</title>
+  	<link rel="icon" type="image/x-icon" href="http://drpd.online/img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="icon-bar">
+        <a href="https://www.facebook.com/profile.php?id=61551347987580" target="_blank" class="icon"><i class="fa fa-facebook"></i></a>
+        <a href="https://instagram.com/drpd.snkrs" target="_blank" class="icon"><i class="fa fa-instagram"></i></a>
+        <a href="https://ig.me/m/drpd.snkrs/" target="_blank" class="icon"><i class="fa fa-comment"></i></a>
+    </div>
+    <div class="top-bar">
+        <a href="#" class="icon"><i class="fa fa-arrow-up"></i></a>
+    </div>
+
+    <header class="navbar">
+        <div class="menu-left">
+            <div class="dropdown">
+                <div class="dropbtn" onclick="void(0)">Menu</div>
+                <div class="dropdown-content">
+                    <a href="/products/nike/">Nike Collection</a>
+                    <a href="/products/jordan">Jordan Collection</a>
+                    <a href="/products/adidas">Adidas Collection</a>
+                    <a href="/products/newbalance">New Balance Collection</a>
+                    <a href="/products/basketball">Basketball Collection</a>
+                    <a href="/products/others">Others</a>
+                </div>
+            </div>
+        </div>
+        <div class="logo">
+            <a href="http://drpd.online"><img src="http://drpd.online/img/logo.png" alt="Logo"></a>
+        </div>
+        <div class="menu-right">
+            <a href="#" class="home-button">Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <h2 class="name">Jordan Collection</h2>
+            <a href="/products/jordan/" class="buy">See More</a>
+            <div class="circle"></div>
+            <img src="/products/jordan/travis.gif" alt="" class="product" draggable="false">
+        </div>
+        <div class="box">
+            <h2 class="name">Adidas Collection</h2>
+            <a href="/products/adidas/" class="buy">See More</a>
+            <div class="circle"></div>
+            <img src="/products/adidas/yeezys.gif" alt="" class="product" draggable="false">
+        </div>
+        <div class="box">
+            <h2 class="name">Basketball Collection</h2>
+            <a href="/products/basketball/" class="buy">See More</a>
+            <div class="circle"></div>
+            <img src="/products/basketball/kobes.gif" alt="" class="product" draggable="false">
+        </div>
+        <div class="box">
+            <h2 class="name">New Balance Collection</h2>
+            <a href="/products/newbalance/" class="buy">See More</a>
+            <div class="circle"></div>
+            <img src="/products/newbalance/nb.gif" alt="" class="product" draggable="false">
+        </div>
+        <div class="box">
+            <h2 class="name">Nike Collection</h2>
+            <a href="/products/nike/" class="buy">See More</a>
+            <div class="circle"></div>
+            <img src="/products/nike/nike.gif" alt="" class="product" draggable="false">
+        </div>
+        <div class="box">
+            <h2 class="name">Other Brands</h2>
+            <a href="/products/others/" class="buy">See More</a>
+            <div class="circle"></div>
+            <img src="/products/others/others.gif" alt="" class="product" draggable="false">
+        </div>
+    </div>
+
+    <div class="bottom">
+        <a>| drpd | 2023</a>
+    </div>
+</body>
+
+<script src="vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+		max: 25,
+		speed: 400
+	});
+</script>
+</html>
