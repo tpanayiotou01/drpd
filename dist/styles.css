@@ -31,3 +31,30 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:35px;pa
 @media(max-width:1050px){nav>a:not(.instagram-link){display:none}.hero{grid-template-columns:1fr;min-height:auto}.hero-visual{min-height:520px}.featured-grid{grid-template-columns:repeat(2,1fr)}.featured-card:nth-child(2){transform:none}.lookbook-section{grid-template-columns:1fr}.colourways{grid-template-columns:repeat(2,minmax(0,1fr));padding-left:0}}
 @media(max-width:700px){.announcement{gap:9px;font-size:.52rem}.announcement span:nth-child(n+4){display:none}.site-header{min-height:68px}.logo{width:112px;height:45px}.instagram-link{min-height:38px;padding:0 14px}main{padding-bottom:75px}.hero{padding:50px 0 65px;gap:45px}.hero h1{font-size:clamp(3.65rem,17vw,5.8rem)}.hero-text{font-size:1rem}.hero-actions{align-items:flex-start;flex-direction:column;gap:18px}.hero-proof{gap:18px}.hero-visual{min-height:400px}.hero-product-main{width:82%;height:70%}.hero-product-small{width:53%;height:42%}.hero-badge{width:82px;height:82px;font-size:1rem}.brand-ticker{overflow:hidden;justify-content:flex-start}.brand-ticker span:nth-child(n+5){display:none}.section-heading,.community-head{display:block;padding-top:60px}.section-heading>p,.community-head>p{margin-top:18px}.featured-grid{grid-template-columns:1fr 1fr;gap:10px}.featured-copy{padding:13px}.featured-copy h3{font-size:.83rem}.featured-card .order-button{display:none}.lookbook-section{margin:80px -8px;padding:50px 20px;border-radius:24px}.lookbook-grid{height:500px;grid-template-columns:1fr 1fr}.photo-slot{padding:14px}.toolbar{grid-template-columns:1fr}.brand-summary{grid-template-columns:1fr 34px;min-height:110px}.brand-meta{display:none}.brand-models{padding-left:0}.model>summary{grid-template-columns:32px 1fr 30px;gap:10px;min-height:88px}.model-meta{display:none}.colourways{grid-template-columns:1fr;gap:14px}.product-info h4{min-height:auto}.steps{grid-template-columns:1fr}.steps article,.steps article:first-child{padding:30px 0;border-right:0;border-bottom:1px solid var(--line)}.steps article:last-child{border-bottom:0}.review-grid{grid-template-columns:1fr}.review-placeholder{min-height:170px}.order-strip{display:block;padding-top:55px;padding-bottom:55px}.order-strip .light-button{margin-top:30px}footer{align-items:flex-start;flex-wrap:wrap}.footer-copy{order:3;width:100%}.footer-links{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* DRPD campaign photography */
+.lookbook-section{display:block;padding:clamp(24px,4vw,56px);scroll-margin-top:100px}
+.lookbook-copy{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:32px}
+.lookbook-intro{max-width:360px}.lookbook-intro p{margin:0 0 22px;color:var(--muted);line-height:1.65}
+.campaign-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:280px 260px 280px;gap:16px}
+.campaign-photo{position:relative;min-width:0;margin:0;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#080908}
+.campaign-photo a{display:block;width:100%;height:100%;text-decoration:none}
+.campaign-photo a:focus-visible{outline:3px solid var(--green);outline-offset:-5px}
+.campaign-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.campaign-photo:hover img{transform:scale(1.035)}
+.campaign-photo figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:7px;padding:40px 22px 20px;background:linear-gradient(transparent,rgba(0,0,0,.8));pointer-events:none}
+.campaign-photo figcaption span{color:var(--green);font-size:.75rem;font-weight:850;letter-spacing:.14em}
+.campaign-photo figcaption strong{font-size:clamp(1.2rem,2vw,1.8rem);letter-spacing:-.035em}
+.campaign-portrait{grid-column:span 5;grid-row:span 2}.campaign-portrait img{object-position:50% 66%}
+.campaign-team{grid-column:span 7}.campaign-team img{object-position:50% 42%}
+.campaign-court{grid-column:span 7}.campaign-court img{object-position:50% 100%}
+.campaign-drive,.campaign-air{grid-column:span 6}
+.campaign-drive img{object-position:44% 100%}.campaign-air img{object-position:54% 86%}
+@media(max-width:1050px){.campaign-grid{grid-template-rows:250px 240px 250px}.lookbook-copy{align-items:start}}
+@media(max-width:700px){.lookbook-copy{display:block}.lookbook-intro{margin-top:24px}.campaign-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:12px}.campaign-portrait{grid-column:span 1;grid-row:span 1;aspect-ratio:2/3}.campaign-team{grid-column:span 1;aspect-ratio:2/3}.campaign-team img{object-position:48% 40%}.campaign-court,.campaign-drive,.campaign-air{grid-column:span 2;aspect-ratio:1.65}.campaign-photo figcaption{padding:34px 14px 14px}.campaign-photo figcaption span{font-size:.7rem}.campaign-photo figcaption strong{font-size:1.2rem}}
+
+.campaign-team img{object-fit:contain}
+.campaign-court figcaption,.campaign-drive figcaption,.campaign-air figcaption{top:0;bottom:auto;padding:18px 22px 36px;background:linear-gradient(rgba(0,0,0,.72),transparent)}
+.campaign-air img{transform:scale(1.4);transform-origin:54% 85%}
+.campaign-air:hover img{transform:scale(1.44)}
+@media(max-width:700px){.campaign-court figcaption,.campaign-drive figcaption,.campaign-air figcaption{padding:14px 14px 34px}}
