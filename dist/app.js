@@ -108,3 +108,29 @@ fetch("catalog.json").then((response) => response.json()).then((payload) => {
 });
 search.addEventListener("input", () => render(search.value));
 expandButton.addEventListener("click", () => { const sections = [...document.querySelectorAll(".brand, .model")]; const shouldOpen = sections.some((section) => !section.open); sections.forEach((section) => { section.open = shouldOpen; }); expandButton.textContent = shouldOpen ? "Collapse all" : "Expand all"; });
+
+
+// Keep campaign photos on the page in a native accessible dialog.
+const photoViewer = document.querySelector("#photo-viewer");
+const viewerImage = photoViewer.querySelector(".photo-viewer-image");
+const viewerCaption = photoViewer.querySelector(".photo-viewer-caption");
+document.querySelectorAll(".campaign-open").forEach((button) => {
+  button.addEventListener("click", () => {
+    viewerImage.src = button.dataset.photo;
+    viewerImage.alt = button.querySelector("img").alt;
+    viewerCaption.textContent = button.querySelector("figcaption strong").textContent;
+    photoViewer.showModal();
+    document.body.classList.add("photo-viewer-open");
+  });
+});
+photoViewer.querySelector(".photo-viewer-close").addEventListener("click", () => photoViewer.close());
+photoViewer.addEventListener("click", (event) => {
+  if (event.target !== photoViewer) return;
+  const bounds = photoViewer.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) photoViewer.close();
+});
+photoViewer.addEventListener("close", () => {
+  document.body.classList.remove("photo-viewer-open");
+  viewerImage.removeAttribute("src");
+});
